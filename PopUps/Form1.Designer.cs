@@ -40,6 +40,7 @@
             this.openRTF.TabIndex = 6;
             this.openRTF.Text = "Open";
             this.openRTF.UseVisualStyleBackColor = true;
+            this.openRTF.Click += new System.EventHandler(this.openRTF_Click_1);
             // 
             // richTextBox1
             // 
