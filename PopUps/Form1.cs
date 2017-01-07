@@ -17,15 +17,6 @@ namespace PopUps
             InitializeComponent();
         }
 
-        private void openRTF_Click(object sender, EventArgs e)
-        {
-            OpenFileDialog ofd = new OpenFileDialog() { Filter = "Rich Text Format|*.rtf", ValidateNames = true, Multiselect = false };
-            {
-                if (ofd.ShowDialog() == DialogResult.OK)
-                    richTextBox1.LoadFile(ofd.FileName);
-            }
-        }
-
         /** Open button click event handler.
          */
         private void openRTF_Click_1(object sender, EventArgs e)
