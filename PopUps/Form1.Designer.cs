@@ -34,7 +34,7 @@
             // 
             // openRTF
             // 
-            this.openRTF.Location = new System.Drawing.Point(224, 498);
+            this.openRTF.Location = new System.Drawing.Point(250, 530);
             this.openRTF.Name = "openRTF";
             this.openRTF.Size = new System.Drawing.Size(100, 39);
             this.openRTF.TabIndex = 6;
@@ -48,7 +48,7 @@
             this.richTextBox1.Location = new System.Drawing.Point(13, 13);
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.ReadOnly = true;
-            this.richTextBox1.Size = new System.Drawing.Size(523, 479);
+            this.richTextBox1.Size = new System.Drawing.Size(580, 511);
             this.richTextBox1.TabIndex = 7;
             this.richTextBox1.Text = "";
             // 
@@ -57,7 +57,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.WindowFrame;
-            this.ClientSize = new System.Drawing.Size(548, 549);
+            this.ClientSize = new System.Drawing.Size(605, 581);
             this.Controls.Add(this.richTextBox1);
             this.Controls.Add(this.openRTF);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
