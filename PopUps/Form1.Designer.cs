@@ -36,7 +36,7 @@
             this.NextButton = new System.Windows.Forms.Button();
             this.listView1 = new System.Windows.Forms.ListView();
             this.Files = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.button1 = new System.Windows.Forms.Button();
+            this.RefreshButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // openRTF
@@ -106,15 +106,15 @@
             this.Files.Text = "Files";
             this.Files.Width = 199;
             // 
-            // button1
+            // RefreshButton
             // 
-            this.button1.Location = new System.Drawing.Point(13, 538);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(199, 23);
-            this.button1.TabIndex = 11;
-            this.button1.Text = "Refresh";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.RefreshButton.Location = new System.Drawing.Point(13, 538);
+            this.RefreshButton.Name = "RefreshButton";
+            this.RefreshButton.Size = new System.Drawing.Size(199, 23);
+            this.RefreshButton.TabIndex = 11;
+            this.RefreshButton.Text = "Refresh";
+            this.RefreshButton.UseVisualStyleBackColor = true;
+            this.RefreshButton.Click += new System.EventHandler(this.RefreshButton_Click);
             // 
             // Form1
             // 
@@ -122,7 +122,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.WindowFrame;
             this.ClientSize = new System.Drawing.Size(809, 581);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.RefreshButton);
             this.Controls.Add(this.listView1);
             this.Controls.Add(this.NextButton);
             this.Controls.Add(this.PrevButton);
@@ -144,7 +144,7 @@
         private System.Windows.Forms.Button NextButton;
         private System.Windows.Forms.ListView listView1;
         private System.Windows.Forms.ColumnHeader Files;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button RefreshButton;
     }
 }
 
