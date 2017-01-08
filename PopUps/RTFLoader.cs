@@ -26,8 +26,24 @@ namespace PopUps
         public RTFLoader()
         {
 
-            // Get the file names from a given directory.
-            mRTFFiles = Directory.GetFiles("../../../TestRTFs/");
+            // Get the file names from a given directory that are rtfs.
+            mRTFFiles = Directory.GetFiles("../../../TestRTFs/", "*.rtf");
+            //mRTFFiles = Directory.GetFiles("../../../TestRTFs/");
+            
+//          for(int i = RemovalList.Count - 1; i >= 0; i--)
+//          { 
+
+//             if(RemovalList[i].Substring(RemovalList[i].Length - 4) != ".rtf")
+//             {
+
+//                  RemovalList.RemoveAt(i);
+
+//             } 
+
+//          }
+
+            // I think I should just change the string array to a list of strings.
+
             mCurrentFileCounter = 0;
 
         }
