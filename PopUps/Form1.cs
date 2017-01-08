@@ -75,6 +75,21 @@ namespace PopUps
             richTextBox1.LoadFile(mRTFLoader.NextDocument());
             mTimeTracker = 0.0;
         }
+
+        private void PopulateListView(ListView lsb, string Folder, string FileType)
+        {
+            DirectoryInfo dinfo = new DirectoryInfo(Folder);
+            FileInfo[] Files = dinfo.GetFiles(FileType);
+            foreach (FileInfo file in Files)
+            {
+                lsb.Items.Add(file.Name);
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            PopulateListView(listView1, @"C:\Users\Zoinu\Source\Repos\PopUps\TestRTFs", "*.rtf");
+        }
     }
 
 }

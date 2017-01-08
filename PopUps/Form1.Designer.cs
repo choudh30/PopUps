@@ -34,11 +34,14 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.PrevButton = new System.Windows.Forms.Button();
             this.NextButton = new System.Windows.Forms.Button();
+            this.listView1 = new System.Windows.Forms.ListView();
+            this.Files = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // openRTF
             // 
-            this.openRTF.Location = new System.Drawing.Point(224, 530);
+            this.openRTF.Location = new System.Drawing.Point(704, 530);
             this.openRTF.Name = "openRTF";
             this.openRTF.Size = new System.Drawing.Size(100, 39);
             this.openRTF.TabIndex = 6;
@@ -49,7 +52,7 @@
             // richTextBox1
             // 
             this.richTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.richTextBox1.Location = new System.Drawing.Point(12, 13);
+            this.richTextBox1.Location = new System.Drawing.Point(218, 12);
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.ReadOnly = true;
             this.richTextBox1.Size = new System.Drawing.Size(580, 511);
@@ -63,7 +66,7 @@
             // PrevButton
             // 
             this.PrevButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.PrevButton.Location = new System.Drawing.Point(12, 530);
+            this.PrevButton.Location = new System.Drawing.Point(492, 529);
             this.PrevButton.Name = "PrevButton";
             this.PrevButton.Size = new System.Drawing.Size(100, 39);
             this.PrevButton.TabIndex = 8;
@@ -74,7 +77,7 @@
             // NextButton
             // 
             this.NextButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.NextButton.Location = new System.Drawing.Point(118, 530);
+            this.NextButton.Location = new System.Drawing.Point(598, 530);
             this.NextButton.Name = "NextButton";
             this.NextButton.Size = new System.Drawing.Size(100, 39);
             this.NextButton.TabIndex = 9;
@@ -82,12 +85,45 @@
             this.NextButton.UseVisualStyleBackColor = true;
             this.NextButton.Click += new System.EventHandler(this.NextButton_Click);
             // 
+            // listView1
+            // 
+            this.listView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.listView1.CheckBoxes = true;
+            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.Files});
+            this.listView1.GridLines = true;
+            this.listView1.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
+            this.listView1.Location = new System.Drawing.Point(13, 12);
+            this.listView1.MultiSelect = false;
+            this.listView1.Name = "listView1";
+            this.listView1.Size = new System.Drawing.Size(199, 511);
+            this.listView1.TabIndex = 10;
+            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.listView1.View = System.Windows.Forms.View.Details;
+            // 
+            // Files
+            // 
+            this.Files.Text = "Files";
+            this.Files.Width = 199;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(13, 538);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(199, 23);
+            this.button1.TabIndex = 11;
+            this.button1.Text = "Refresh";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.WindowFrame;
-            this.ClientSize = new System.Drawing.Size(605, 581);
+            this.ClientSize = new System.Drawing.Size(809, 581);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.listView1);
             this.Controls.Add(this.NextButton);
             this.Controls.Add(this.PrevButton);
             this.Controls.Add(this.richTextBox1);
@@ -106,6 +142,9 @@
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Button PrevButton;
         private System.Windows.Forms.Button NextButton;
+        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ColumnHeader Files;
+        private System.Windows.Forms.Button button1;
     }
 }
 
