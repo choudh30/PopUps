@@ -51,7 +51,6 @@ namespace PopUps
         private void timer1_Tick(object sender, EventArgs e)
         {
 
-            
             mTimeTracker += .1;
             // When our counter reaches the threshold, cycle the document.
             if (mTimeTracker >= mTimeThreshold)

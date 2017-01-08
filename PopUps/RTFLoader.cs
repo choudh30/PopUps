@@ -64,5 +64,11 @@ namespace PopUps
             return mRTFFiles[mCurrentFileCounter];
         }
 
+        /** Get the list of rtf files */
+        public string[] GetRTFFiles()
+        {
+            return mRTFFiles;
+        }
+
     }
 }
