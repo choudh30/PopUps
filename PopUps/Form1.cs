@@ -13,30 +13,23 @@ namespace PopUps
 {
     public partial class Form1 : Form
     {
-
-        // String array for our rtf files
-        string[] mRTFFiles;
-        // Counter to keep track of the current rtf file.
-        int mCurrentFileCounter;
+        // The class to handle file selection.
+        RTFLoader mRTFLoader;
         // Keep track of time passed by the counter event.
         double mTimeTracker;
         // Time threshold for switching document viewed.
-        const double mTimeThreshold = 3.0;
+        const double mTimeThreshold = 10.0;
 
         public Form1()
         {
 
             InitializeComponent();
-            // Get the file names from a given directory.
-            mRTFFiles = Directory.GetFiles("../../../TestRTFs/");
+            mRTFLoader = new RTFLoader();
             //Start our timer
             timer1.Start();
-
-            mCurrentFileCounter = 0;
             mTimeTracker = 0.0;
- 
             // Load the first document
-            richTextBox1.LoadFile(mRTFFiles[mCurrentFileCounter]);
+            richTextBox1.LoadFile(mRTFLoader.GetInitialFile());
         }
 
         /** Open button click event handler.
@@ -58,23 +51,30 @@ namespace PopUps
         private void timer1_Tick(object sender, EventArgs e)
         {
 
+            
             mTimeTracker += .1;
+            // When our counter reaches the threshold, cycle the document.
             if (mTimeTracker >= mTimeThreshold)
             {
-                CycleViewedDocument();
+                richTextBox1.Clear();
+                richTextBox1.LoadFile(mRTFLoader.NextDocument());
                 mTimeTracker = 0.0;
             }
 
         }
 
-        /** Cycle the document that is to be viewed based on the pool of documents in mRTFFiles array */
-        private void CycleViewedDocument()
+        /** Called when the previous button is clicked */
+        private void PrevButton_Click(object sender, EventArgs e)
         {
-            mCurrentFileCounter = (mCurrentFileCounter + 1) % mRTFFiles.Length;
-            // Clear the text box of the last file loaded
-            richTextBox1.Clear();
-            // Load the next rtf file 
-            richTextBox1.LoadFile(mRTFFiles[mCurrentFileCounter]);
+            richTextBox1.LoadFile(mRTFLoader.PreviousDocument());
+            mTimeTracker = 0.0;
+        }
+
+        /** Called when the next button is clicked */
+        private void NextButton_Click(object sender, EventArgs e)
+        {
+            richTextBox1.LoadFile(mRTFLoader.NextDocument());
+            mTimeTracker = 0.0;
         }
     }
 
