@@ -76,16 +76,20 @@ namespace PopUps
             mTimeTracker = 0.0;
         }
 
+        /** Used by refresh button to populate the listView with the name of the file and its path*/
         private void PopulateListView(ListView lvi, string Folder, string FileType)
         {
             DirectoryInfo dinfo = new DirectoryInfo(Folder);
             FileInfo[] Files = dinfo.GetFiles(FileType);
             foreach (FileInfo file in Files)
             {
-                lvi.Items.Add(file.Name);
+                ListViewItem item = new ListViewItem(file.Name);
+                item.SubItems.Add(file.FullName);
+                lvi.Items.Add(item);
             }
         }
 
+        /** PopulateListView is called when refresh button is clicked*/
         private void RefreshButton_Click(object sender, EventArgs e)
         {
             PopulateListView(listView1, "../../../TestRTFs/", "*.rtf");

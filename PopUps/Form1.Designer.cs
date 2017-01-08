@@ -37,6 +37,7 @@
             this.listView1 = new System.Windows.Forms.ListView();
             this.Files = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.RefreshButton = new System.Windows.Forms.Button();
+            this.FilePath = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
             // openRTF
@@ -88,9 +89,10 @@
             // listView1
             // 
             this.listView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.listView1.CheckBoxes = true;
             this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.Files});
+            this.Files,
+            this.FilePath});
+            this.listView1.FullRowSelect = true;
             this.listView1.GridLines = true;
             this.listView1.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
             this.listView1.Location = new System.Drawing.Point(13, 12);
@@ -103,8 +105,8 @@
             // 
             // Files
             // 
-            this.Files.Text = "Files";
-            this.Files.Width = 199;
+            this.Files.Text = "File";
+            this.Files.Width = 100;
             // 
             // RefreshButton
             // 
@@ -115,6 +117,11 @@
             this.RefreshButton.Text = "Refresh";
             this.RefreshButton.UseVisualStyleBackColor = true;
             this.RefreshButton.Click += new System.EventHandler(this.RefreshButton_Click);
+            // 
+            // FilePath
+            // 
+            this.FilePath.Text = "File Path";
+            this.FilePath.Width = 100;
             // 
             // Form1
             // 
@@ -145,6 +152,7 @@
         private System.Windows.Forms.ListView listView1;
         private System.Windows.Forms.ColumnHeader Files;
         private System.Windows.Forms.Button RefreshButton;
+        private System.Windows.Forms.ColumnHeader FilePath;
     }
 }
 
