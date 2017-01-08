@@ -36,8 +36,9 @@
             this.NextButton = new System.Windows.Forms.Button();
             this.listView1 = new System.Windows.Forms.ListView();
             this.Files = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.RefreshButton = new System.Windows.Forms.Button();
             this.FilePath = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.RefreshButton = new System.Windows.Forms.Button();
+            this.LoadButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // openRTF
@@ -108,20 +109,30 @@
             this.Files.Text = "File";
             this.Files.Width = 100;
             // 
+            // FilePath
+            // 
+            this.FilePath.Text = "File Path";
+            this.FilePath.Width = 100;
+            // 
             // RefreshButton
             // 
             this.RefreshButton.Location = new System.Drawing.Point(13, 538);
             this.RefreshButton.Name = "RefreshButton";
-            this.RefreshButton.Size = new System.Drawing.Size(199, 23);
+            this.RefreshButton.Size = new System.Drawing.Size(95, 23);
             this.RefreshButton.TabIndex = 11;
             this.RefreshButton.Text = "Refresh";
             this.RefreshButton.UseVisualStyleBackColor = true;
             this.RefreshButton.Click += new System.EventHandler(this.RefreshButton_Click);
             // 
-            // FilePath
+            // LoadButton
             // 
-            this.FilePath.Text = "File Path";
-            this.FilePath.Width = 100;
+            this.LoadButton.Location = new System.Drawing.Point(118, 538);
+            this.LoadButton.Name = "LoadButton";
+            this.LoadButton.Size = new System.Drawing.Size(94, 23);
+            this.LoadButton.TabIndex = 12;
+            this.LoadButton.Text = "Load";
+            this.LoadButton.UseVisualStyleBackColor = true;
+            this.LoadButton.Click += new System.EventHandler(this.LoadButton_Click);
             // 
             // Form1
             // 
@@ -129,6 +140,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.WindowFrame;
             this.ClientSize = new System.Drawing.Size(809, 581);
+            this.Controls.Add(this.LoadButton);
             this.Controls.Add(this.RefreshButton);
             this.Controls.Add(this.listView1);
             this.Controls.Add(this.NextButton);
@@ -153,6 +165,7 @@
         private System.Windows.Forms.ColumnHeader Files;
         private System.Windows.Forms.Button RefreshButton;
         private System.Windows.Forms.ColumnHeader FilePath;
+        private System.Windows.Forms.Button LoadButton;
     }
 }
 

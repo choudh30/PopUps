@@ -94,6 +94,12 @@ namespace PopUps
         {
             PopulateListView(listView1, "../../../TestRTFs/", "*.rtf");
         }
+
+        /** Button that will load the selected item within listView into the RTFViewer */
+        private void LoadButton_Click(object sender, EventArgs e)
+        {
+            richTextBox1.LoadFile(listView1.SelectedItems[0].SubItems[1].Text);
+        }
     }
 
 }
