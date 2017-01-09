@@ -25,6 +25,9 @@ namespace PopUps
 
             // Load the first document
             richTextBox1.LoadFile(mRTFLoader.GetInitialFile());
+            // Populate the list on startup.
+            PopulateListView(listView1, "../../../TestRTFs/", "*.rtf");
+
         }
 
         /** Open button click event handler.
