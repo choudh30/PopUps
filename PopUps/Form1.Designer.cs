@@ -28,10 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.openRTF = new System.Windows.Forms.Button();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.PrevButton = new System.Windows.Forms.Button();
             this.NextButton = new System.Windows.Forms.Button();
             this.listView1 = new System.Windows.Forms.ListView();
@@ -40,16 +37,6 @@
             this.RefreshButton = new System.Windows.Forms.Button();
             this.LoadButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
-            // 
-            // openRTF
-            // 
-            this.openRTF.Location = new System.Drawing.Point(704, 530);
-            this.openRTF.Name = "openRTF";
-            this.openRTF.Size = new System.Drawing.Size(100, 39);
-            this.openRTF.TabIndex = 6;
-            this.openRTF.Text = "Open";
-            this.openRTF.UseVisualStyleBackColor = true;
-            this.openRTF.Click += new System.EventHandler(this.openRTF_Click_1);
             // 
             // richTextBox1
             // 
@@ -60,10 +47,6 @@
             this.richTextBox1.Size = new System.Drawing.Size(580, 511);
             this.richTextBox1.TabIndex = 7;
             this.richTextBox1.Text = "";
-            // 
-            // timer1
-            // 
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // PrevButton
             // 
@@ -146,7 +129,6 @@
             this.Controls.Add(this.NextButton);
             this.Controls.Add(this.PrevButton);
             this.Controls.Add(this.richTextBox1);
-            this.Controls.Add(this.openRTF);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.Name = "Form1";
@@ -156,9 +138,7 @@
         }
 
         #endregion
-        private System.Windows.Forms.Button openRTF;
         private System.Windows.Forms.RichTextBox richTextBox1;
-        private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Button PrevButton;
         private System.Windows.Forms.Button NextButton;
         private System.Windows.Forms.ListView listView1;

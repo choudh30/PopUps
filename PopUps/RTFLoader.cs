@@ -42,7 +42,6 @@ namespace PopUps
 
 //          }
 
-            // I think I should just change the string array to a list of strings.
 
             mCurrentFileCounter = 0;
 
